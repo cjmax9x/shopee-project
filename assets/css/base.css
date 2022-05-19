@@ -1,0 +1,350 @@
+:root {
+    --white-color:#fff;
+    --black-color: #000;
+    --text-color:#333;
+    --width-header:120px;
+    --width-header-grid:38px;
+    --width-with-search:calc(var(--width-header) - var(--width-header-grid))
+}
+*{ 
+    box-sizing: inherit;
+}
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem ;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+.header__grid {
+    width: 1200px;
+    margin: 0 auto;
+    height: var(--width-header-grid);
+}
+.container{
+    background-color: #F5F5F5;
+}
+.container__grid-main-menu{
+    padding-top: 10px;
+}
+.container__grid-category{
+    padding-top: 40px;
+}
+.container__grid-sale{
+    width: 1200px;
+    height: 300px;
+    margin: 20px auto 0;
+    background-color: var(--white-color);
+    border-radius: 4px;
+}
+.container__other-services{
+    padding-top: 20px;
+    position: relative;
+}
+.container__main-product{
+    background-color: #F5F5F5;
+    width: 1200px;
+    margin: 14px auto 0;
+}
+.footer{
+    width: 100%;
+    margin: 70px auto 0;
+}
+.container__shopee-mall,
+.container__popular-search,
+.container__top-search{
+    background-color: #fff;
+    width: 1200px;
+    margin: 14px auto 0;
+}
+.main-slide__grid, 
+.container__grid-main-menu, 
+.container__grid-category,
+.container__other-services{
+    width: 1200px;
+    margin: 0 auto;
+}
+.grid-main-menu__row-main-menu{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: white;
+}
+.grid__row-main-slide {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.header__navbar-icon{
+    margin-right: 6px;
+}
+.deactive-display {
+    display: none !important;
+}
+.header__navbar-item a,
+.header__navbar-icon,
+.header__navbar-item-link,
+.header__navbar-item{
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 500;
+    text-decoration: none;
+
+}
+.header__navbar-item{
+    margin: 0 8px;
+    position: relative;
+}
+.ti-angle-down{
+    font-size: 10px;
+}
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+@keyframes headerDownload {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes navbarGrowth {
+    from { 
+        transform: scale(0);
+        opacity: 0;
+    
+        }
+    to {
+        transform: scale(1);
+        opacity: 1;
+        }
+    }
+
+@keyframes main-product-tranform {
+    from {
+        transform: translateY(0%);
+    }
+    to{
+        transform: translateY(-1%);
+    }
+}
+    
+
+
+
+/* Modal registor and login */
+.modal {
+    display:flex ;
+    align-items: center;
+    justify-content: center;
+    animation: navbarGrowth ease-in 0.19s;
+    display: none;
+}
+/* Modal registor */
+.modal__container{
+    min-height: 430px;
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 400px;
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 6px;
+    display: none;
+}
+
+.modal .modal__header{
+    height: 80px;
+}
+
+.modal .modal__heading {
+    display: block;
+    line-height: 80px;
+    margin: 0 0 ;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.modal__body{
+    margin-bottom: 35px;
+}
+.modal .modal__input, .modal .modal__btn{
+    display: block;
+}
+.modal .modal__text-input {
+    width: 100%;
+    height: 34px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    border: 1.0px solid rgb(221, 210, 210);
+    border-radius: 2px;
+    outline: none;
+}
+.modal .modal__text-input:focus{
+    border-color: black;
+}
+.modal .modal__btn {
+    margin: 30px 0px;
+}
+.modal .modal__btn-click {
+    width: 100%;
+    height: 34px;
+    background-color: #F3836C;
+    color: white;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    border: none;
+    cursor: no-drop;
+    border-radius: 2px;
+}
+
+.modal .modal__separate {
+    display: flex;
+    align-items: center;
+}
+.modal .modal__separate-mark-1, .modal .modal__separate-mark-2 {
+    width: 15px;
+    height: 1.5px;
+    background-color: rgb(221, 210, 210);
+    flex: 2;
+}
+.modal .modal__separate-text{
+    font-size: 1.5rem;
+    font-weight: 350;
+    color: rgb(221, 210, 210);
+    flex: 1;
+    text-align: center;
+}
+
+
+.modal .modal__social{
+    display: flex;
+    justify-content: space-between;
+}
+.modal .modal__p-margin{
+    margin: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.modal .modal__modifier{
+    width: 30%;
+    height:40px;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.modal__social .modal__modifier:hover {
+    opacity: 0.9;
+}
+.modal__facebook{
+    background-color:#1877F2 ;
+}
+.modal__google{
+ background-color: #4285F4;
+}
+.modal__apple{
+    background-color: black;
+}
+
+
+.modal__footer {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight:350px;
+}
+.modal__footer p {
+    margin: 0;
+}
+.modal .modal__policy-link{
+    color:#FE6533 ;
+}
+.modal .modal__suggest{
+    padding:35px 0px;
+    font-size: 1.45rem;
+}
+.modal .modal__suggest-text{
+    opacity: 0.6;
+}
+.modal .modal__suggest-link{
+    color:#FE6533 ;
+}
+/* Modal login */
+.modal__container-log{
+    min-height: 430px;
+    max-height: 100%;
+    max-width: 100%;
+    min-width: 400px;
+    background-color: white;
+    padding: 0 30px;
+    border-radius: 6px;
+    /* display: none; */
+}
+.modal .modal__header-log{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    padding: 15px 0;
+}
+.modal .modal__heading-1{
+    margin: 0 0 0 1.25rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFBF00;
+    height: 60px;
+    width: 160px;
+    line-height: 1.3;
+    border: 2px solid;
+    background-color: #FEFAEC;
+    text-align: justify;
+    padding: 10px 10px;
+    position: relative;
+}
+.modal .modal__heading-1::after{
+    content: "";
+    display: block;
+    border-top: 2px solid #FFBF00;
+    border-right: 2px solid #FFBF00;
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    position: absolute;
+    right: -8px;
+    top: 40%;
+    background-color: #FEFAEC;
+}
+.modal .modal__input-mail, .modal__input-password {
+    width: 100%;
+    height: 34px;
+    font-size: 1.4rem;
+    padding: 0 12px;
+    border: 1.0px solid rgb(221, 210, 210);
+    border-radius: 2px;
+    outline: none;
+    margin-bottom: 30px;
+}
+.modal .modal__input-mail:focus, .modal__input-password:focus {
+    border-color: black;
+}
+.modal .modal__more-infor {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.modal .modal__forgot, .modal__switch-login{
+    text-decoration: none;
+    color: #5255BD;
+}
